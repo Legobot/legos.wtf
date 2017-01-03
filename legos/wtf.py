@@ -1,6 +1,8 @@
 import requests
-
+import logging
 from Legobot.Lego import Lego
+
+logger = logging.getLogger(__name__)
 
 
 class WikipediaTopFinder(Lego):
@@ -10,9 +12,10 @@ class WikipediaTopFinder(Lego):
     def handle(self, message):
         try:
             target = message['metadata']['source_channel']
-            opts = {'target':target}
+            opts = {'target': target}
         except IndexError:
-            logger.error('Could not identify message source in message: %s' % str(message))
+            logger.error('Could not identify message source in message: %s'
+                         % str(message))
         base_url = 'https://en.wikipedia.org/w/index.php?search='
         search_params = '%20'.join(message['text'].split()[1:])
         r = requests.get(base_url + search_params)
