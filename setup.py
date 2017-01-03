@@ -25,7 +25,9 @@ setup(
     description='Wikipedia Top Finder plugin for Legobot',
     author='Brenton Briggs II',
     url='https://github.com/bbriggs/' + name,
-    install_requires = ['legobot'],
+    install_requires = ['legobot>=1.0.1',
+                        'requests'
+                        ],
     classifiers=[
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
 
