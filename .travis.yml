@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.5'
+script:
+- flake8 .
+deploy:
+  provider: pypi
+  user: briggsb
+  password:
+    secure: 9Jp+mE0lL4b6w8HWsNvWwpbj8S36S4LHJkg67eolR2EKR/wm+PBz8b9c+WBnKD2jrHyYvThxHlLVn/k/siWtU9ENg+ASOMmgCukHQZP/AUScyQyso37MFpxbG1v81+8DfIYy9DGnrXIzjgj3XJB1e8CqW/ceVX6gYT7xSlJMtQHRmCFBZ1bxNulPvMElcqtgtpuDI5MLiI77B0EsQoFf8rws6m2q2UyUvlQwOmj5xXwKpmbfhqNKdgV96cVGpaDn0RWcu/SNmh5o8/goed1LCjka9bmj1DIsP2AHkVWpCNVb4zGpkvFtPPPLnHhjKuYDK3CQHGDY24N+8Mvr7QwCQxiBoggxhAMUL/BWfBVtGkScuiP1yCkMPEd5h0QfzPQaG1E8RCAYEnw+SO6ITSjgM+/e4/u96W7aKO/4O7UWi4PSRLpmAkUAl/sErSG4tsSRMWHUbuNqDlympI9wF60quqheZV91Bhg3Fx/KzMjU3OS/yd1XLmpOIz+ctrS7T/Yl7Axggd8d197GSYy/vWq0KRNg2Xb1O0uLgMMOnZWHK4gLvaZVMzc6gnzvaIs5lB4S2bpP+hxNH7KUusX5J0GEZAoieT2nuvtxzbpmVjVLyG/uQzf7IhMfEREFAJlaoEmB96sr2ujkETpBlmqopyOUZ5hGB1mDCJZ8UBERglcl9j0=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: bbriggs/legos.wtf
