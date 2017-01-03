@@ -22,7 +22,7 @@ setup(
     version='0.1.1',
     namespace_packages=name.split('.')[:-1],
     license='GPLv3',
-    description=description or name,
+    description='Wikipedia Top Finder plugin for Legobot',
     author='Brenton Briggs II',
     url='https://github.com/bbriggs/' + name,
     install_requires = ['legobot'],

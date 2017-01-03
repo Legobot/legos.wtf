@@ -3,6 +3,7 @@ python:
 - '3.5'
 script:
 - flake8 .
+- bandit -r .
 deploy:
   provider: pypi
   user: briggsb
