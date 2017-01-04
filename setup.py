@@ -15,15 +15,23 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from setuptools import setup, find_packages
-descrption = 'Wikipedia Top Finder plugin for Legobot'
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except (IOError, ImportError):
+    description = ''
+
+description = 'Wikipedia Top Finder plugin for Legobot'
 name = 'legos.wtf'
 setup(
     name=name,
     version='0.1.2',
     namespace_packages=name.split('.')[:-1],
     license='GPLv3',
-    description='Wikipedia Top Finder plugin for Legobot',
+    description=description,
+    long_description=long_description,
     author='Brenton Briggs II',
+    author_email='briggs.brenton@gmail.com',
     url='https://github.com/bbriggs/' + name,
     install_requires=['legobot>=1.0.1',
                       'requests'
