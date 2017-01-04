@@ -25,7 +25,7 @@ description = 'Wikipedia Top Finder plugin for Legobot'
 name = 'legos.wtf'
 setup(
     name=name,
-    version='0.1.2',
+    version='0.1.3',
     namespace_packages=name.split('.')[:-1],
     license='GPLv3',
     description=description,
@@ -38,7 +38,7 @@ setup(
                       ],
     classifiers=[
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python :: 3'
     ],
     packages=find_packages()
