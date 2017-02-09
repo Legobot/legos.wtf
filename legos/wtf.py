@@ -11,7 +11,7 @@ class WikipediaTopFinder(Lego):
             try:
                 return message['text'].split()[0] == '!wtf'
             except Exception as e:
-                logger.error('WTF lego failed to cehck message text: %s' % e)
+                logger.error('WTF lego failed to check message text: %s' % e)
                 return False
 
     def handle(self, message):
