@@ -7,7 +7,12 @@ logger = logging.getLogger(__name__)
 
 class WikipediaTopFinder(Lego):
     def listening_for(self, message):
-        return message['text'].split()[0] == '!wtf'
+        if message['text'] is not None:
+            try:
+                return message['text'].split()[0] == '!wtf'
+            except Exception as e:
+                logger.error('WTF lego failed to cehck message text: %s' % e)
+                return False
 
     def handle(self, message):
         try:
